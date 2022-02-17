@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money-Honey</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="images/flying-money.png" type="image/x-icon">
+    <style>
+        .custom-container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .custom-container {
+                max-width: 80%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -16,55 +29,66 @@
     </header>
 
     <!-- main body section -->
-    <section class="container mx-auto grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="w-full h-full"><img src="images/money-calc.jpg" alt=""></div>
-        <div class="bg-slate-100 px-20">
-            <!-- income -->
-            <div>
-                <h2 class="font-semibold text-center text-2xl m-4">Income</h2>
-                <label class="flex items-center justify-evenly">
-                    <span class="text-gray-700">Income:</span><br>
-                    <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
-                            placeholder="Amount of your Income"></span>
-                </label>
-            </div>
-            <!-- Expenses -->
-            <div>
-                <h2 class="font-semibold text-center text-2xl m-4">Expenses</h2>
-                <label class="flex items-center justify-evenly">
-                    <span class="text-gray-700">Food:</span><br>
-                    <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
-                            placeholder="Food Expenses?"></span>
-                </label>
-                <label class="flex items-center my-2 justify-evenly">
-                    <span class="text-gray-700">Rent:</span><br>
-                    <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
-                            placeholder="Rent Expenses?"></span>
-                </label>
-                <label class="flex items-center my-2 justify-evenly">
-                    <span class="text-gray-700">Cloth:</span><br>
-                    <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
-                            placeholder="Cloths Expenses?"></span>
-                </label>
-                <span class="flex justify-center m-4"><button
-                        class="bg-cyan-500 px-8 py-2 rounded">Calculate</button></span>
-                <h2 class="font-semibold text-center text-2xl m-4">Total Expenses: <span>00</span></h2>
-                <h2 class="font-semibold text-center text-2xl m-4">Balance: <span>00</span></h2>
+    <section class="custom-container">
+        <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="flex items-center"><img src="images/money-calc.jpg" alt=""></div>
+            <div class="bg-slate-100">
 
-                <!-- percentage -->
-                <label class="flex items-center my-2 justify-evenly">
-                    <span class="text-gray-700">Save:</span><br>
-                    <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
-                            placeholder="Percentage to save?"></span>
-                    <span>%</span>
-                    <span><button class="bg-cyan-500 px-8 py-2 rounded">Save</button></span>
-                </label>
-                <h2 class="font-semibold text-center text-2xl m-4">Saving Amount: <span>00</span></h2>
-                <h2 class="font-semibold text-center text-2xl m-4">Remaining Balance: <span>00</span></h2>
+                <!-- income -->
+                <div>
+                    <h2 class="font-semibold text-center text-2xl m-4">Income</h2>
+                    <label class="flex items-center justify-evenly">
+                        <span class="text-gray-700">Income:</span><br>
+                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                                placeholder="Amount of your Income"></span>
+                    </label>
+                </div>
+
+                <!-- Expenses -->
+                <div>
+                    <h2 class="font-semibold text-center text-2xl m-4">Expenses</h2>
+                    <label class="flex items-center justify-evenly">
+                        <span class="text-gray-700">Food:</span><br>
+                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                                placeholder="Food Expenses?"></span>
+                    </label>
+                    <label class="flex items-center my-2 justify-evenly">
+                        <span class="text-gray-700">Rent:</span><br>
+                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                                placeholder="Rent Expenses?"></span>
+                    </label>
+                    <label class="flex items-center my-2 justify-evenly">
+                        <span class="text-gray-700">Cloth:</span><br>
+                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                                placeholder="Cloths Expenses?"></span>
+                    </label>
+                    <span class="flex justify-center m-4"><button
+                            class="bg-cyan-500 px-8 py-2 rounded text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">Calculate</button></span>
+                    <h2 class="font-semibold text-center text-2xl m-4">Total Expenses: <span>00</span></h2>
+                    <h2 class="font-semibold text-center text-2xl m-4">Balance: <span>00</span></h2>
+
+                    <!-- percentage -->
+                    <label class="flex items-center my-2 justify-evenly">
+                        <span class="text-gray-700">Save:</span><br>
+                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                                placeholder="Percentage to save?"></span>
+                        <span>%</span>
+                        <span><button
+                                class="bg-cyan-500 px-8 py-2 rounded text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">Save</button></span>
+                    </label>
+                    <h2 class="font-semibold text-center text-2xl m-4">Saving Amount: <span>00</span></h2>
+                    <h2 class="font-semibold text-center text-2xl m-4 mb-8">Remaining Balance: <span>00</span></h2>
+                </div>
             </div>
         </div>
-
     </section>
+
+
+    <!-- footer part -->
+    <footer class="bg-slate-300 p-5 text-center">
+        Copyright © 2022. All Rights Reserved!
+    </footer>
+
 
     <!-- js script -->
     <script src="script.js"></script>
