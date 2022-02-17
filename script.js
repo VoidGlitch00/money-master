@@ -19,21 +19,56 @@ function moneyHoney(inputId) {
     const finalBalance = incomeAmount - totalExpense;
     /* Percentage Calculation */
     const percentValue = parseInt(percentageDigit.value);
-    const savingAmount = parseInt(incomeAmount * (percentValue / 100));
+    const savingAmount = parseFloat(incomeAmount * (percentValue / 100)).toFixed(2);
     const savings = document.getElementById("saving-amount");
-    const leftBalance = finalBalance - savingAmount;
-    if (inputId == "incomeAndExpense") {
-        /* showing balance */
-        showTotalExpense.innerText = totalExpense;
-        showFinalBalance.innerText = finalBalance;
+    const leftBalance = (finalBalance - savingAmount).toFixed(2);
+    if (incomeAmount < 0 || percentageDigit < 0 || foodAmount < 0 || rentAmount < 0 || clothesAmount < 0) {
+        alert("Insert a positive number or go to Mars!");
     }
-    else if (inputId == "percentage") {
-        /* showing percentage */
-        savings.innerText = savingAmount;
-        remainingBalance.innerText = leftBalance;
+    else if (finalBalance > incomeAmount || finalBalance < 0) {
+        alert("You can't spend money more than you income and be a wise man!");
     }
+    else {
+        if (inputId == "incomeAndExpense") {
+            /* showing balance */
+            showTotalExpense.innerText = totalExpense;
+            showFinalBalance.innerText = finalBalance;
+        }
+        else if (inputId == "percentage") {
+            /* showing percentage */
+            if (isNaN(percentValue) || percentValue < 0) {
+                alert("Insert a valid Integer or Helmet League is coming!");
+            }
+            else if (leftBalance < 0) {
+                alert("You don't have enough money to save. Sell your mobile!");
+            }
+            else {
+                savings.innerText = savingAmount;
+                remainingBalance.innerText = leftBalance;
+            }
+        }
+    }
+    /* extra error handling */
+    try {
+        if (isNaN(incomeAmount)) {
+            throw "Insert a valid Integer or Helmet League is coming!";
+        }
+        else if (isNaN(foodAmount)) {
+            throw "Insert a valid Integer or Helmet League is coming!";
+        }
+        else if (isNaN(rentAmount)) {
+            throw "Insert a valid Integer or Helmet League is coming!";
+        }
+        else if (isNaN(clothesAmount)) {
+            throw "Insert a valid Integer or Helmet League is coming!";
+        }
+    } catch (error) {
+        alert(error);
+    }
+
 }
 
+/* calling functions */
 /* Income & Expenses */
 document.getElementById("final-calculation").addEventListener("click", function () {
     moneyHoney("incomeAndExpense");
