@@ -39,7 +39,7 @@
                     <h2 class="font-semibold text-center text-2xl m-4">Income</h2>
                     <label class="flex items-center justify-evenly">
                         <span class="text-gray-700">Income:</span><br>
-                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                        <span><input type="text" id="income-input" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
                                 placeholder="Amount of your Income"></span>
                     </label>
                 </div>
@@ -49,23 +49,23 @@
                     <h2 class="font-semibold text-center text-2xl m-4">Expenses</h2>
                     <label class="flex items-center justify-evenly">
                         <span class="text-gray-700">Food:</span><br>
-                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                        <span><input type="text" id="food-expense-input" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
                                 placeholder="Food Expenses?"></span>
                     </label>
                     <label class="flex items-center my-2 justify-evenly">
                         <span class="text-gray-700">Rent:</span><br>
-                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                        <span><input type="text" id="rent-expense-input" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
                                 placeholder="Rent Expenses?"></span>
                     </label>
                     <label class="flex items-center my-2 justify-evenly">
                         <span class="text-gray-700">Cloth:</span><br>
-                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
-                                placeholder="Cloths Expenses?"></span>
+                        <span><input type="text" id="clothes-expense-input" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                                placeholder="Clothes Expenses?"></span>
                     </label>
-                    <span class="flex justify-center m-4"><button
+                    <span class="flex justify-center m-4"><button id="final-calculation"
                             class="bg-cyan-500 px-8 py-2 rounded text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">Calculate</button></span>
-                    <h2 class="font-semibold text-center text-2xl m-4">Total Expenses: <span>00</span></h2>
-                    <h2 class="font-semibold text-center text-2xl m-4">Balance: <span>00</span></h2>
+                    <h2 class="font-semibold text-center text-2xl m-4">Total Expenses: <span id="total-expense">00</span></h2>
+                    <h2 class="font-semibold text-center text-2xl m-4">Balance: <span id="final-balance">00</span></h2>
 
                     <!-- percentage -->
                     <label class="flex items-center my-2 justify-evenly">
