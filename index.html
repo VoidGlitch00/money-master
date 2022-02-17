@@ -70,14 +70,14 @@
                     <!-- percentage -->
                     <label class="flex items-center my-2 justify-evenly">
                         <span class="text-gray-700">Save:</span><br>
-                        <span><input type="text" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
+                        <span><input type="text" id="percent-digit" class="mt-1 block w-full bg-slate-200 px-5 py-2 rounded"
                                 placeholder="Percentage to save?"></span>
                         <span>%</span>
-                        <span><button
+                        <span><button id="percentage-calculation"
                                 class="bg-cyan-500 px-8 py-2 rounded text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">Save</button></span>
                     </label>
-                    <h2 class="font-semibold text-center text-2xl m-4">Saving Amount: <span>00</span></h2>
-                    <h2 class="font-semibold text-center text-2xl m-4 mb-8">Remaining Balance: <span>00</span></h2>
+                    <h2 class="font-semibold text-center text-2xl m-4">Saving Amount: <span id="saving-amount">00</span></h2>
+                    <h2 class="font-semibold text-center text-2xl m-4 mb-8">Remaining Balance: <span id="remaining-balance">00</span></h2>
                 </div>
             </div>
         </div>
